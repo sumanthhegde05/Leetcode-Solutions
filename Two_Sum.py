@@ -2,10 +2,10 @@ class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
         dictionary = {}
         result=[]
-        for items in range(0,len(nums)):
-            if target-nums[items] not in dictionary:
-                dictionary[nums[items]] = items
+        for item in range(0,len(nums)):
+            if target-nums[item] not in dictionary:
+                dictionary[nums[item]] = item
             else:
-                result.append(dictionary[target - nums[items]])
-                result.append(items)
+                result.append(dictionary[target - nums[item]])
+                result.append(item)
         return result
